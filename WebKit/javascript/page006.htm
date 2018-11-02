@@ -1,0 +1,54 @@
+
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function compute(){
+      t1 = document.getElementById("t1");
+      t2 = document.getElementById("t2");
+      optr = document.getElementById("optr");
+      res  = document.getElementById("res");
+
+      op1 = parseFloat(t1.value);
+      op2 = parseFloat(t2.value);
+
+	  var resultMsg;
+	  
+      switch(optr.selectedIndex){
+       case 1: resultMsg = "<b>Sum : " + (op1+op2) + "</b>"; break;
+       case 2: resultMsg = "<b>Dif : " + (op1-op2) + "</b>"; break;
+       case 3: resultMsg = "<b>Prd : " + (op1*op2) + "</b>"; break;
+       case 4: resultMsg = "<b>Qut : " + (op1/op2) + "</b>"; break;
+       case 5: resultMsg = "<b>Rem : " + (op1%op2) + "</b>"; break;
+      }
+	  
+	  res.innerHTML = resultMsg;
+     }
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Arithmetic Operations </h3>
+      Operand1: <input type="number" id="t1" onblur="compute()"/>  <br />
+      Operand2: <input type="number" id="t2" onblur="compute()"/>  <br />
+      Operation: <select id="optr" onchange="compute()">
+                  <option value="">---Select---</option>
+                  <option value="+">Addition</option>
+                  <option value="-">Substraction</option>
+                  <option value="*">Multiplication</option>
+                  <option value="/">Division</option>
+                  <option value="%">Modulo</option>
+                 </select>
+
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

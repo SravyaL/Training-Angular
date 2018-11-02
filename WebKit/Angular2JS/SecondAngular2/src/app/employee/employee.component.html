@@ -1,0 +1,57 @@
+
+<h3>{{greeting}}</h3>
+
+<form>
+  <table>
+    <tr>
+      <th>Field</th>
+      <th>Edit</th>
+      <th>Preview</th>
+    </tr>
+    <tr>
+      <td>Employee Id</td>
+      <td><input type="number" name="eid" [(ngModel)]="employee.empId" /></td>
+      <td>{{employee.empId | number : '3.0'}}</td>
+    </tr>
+    <tr>
+      <td>Employee Name</td>
+      <td><input type="text" name="enm" [(ngModel)]="employee.eName" /></td>
+      <td>{{employee.eName | uppercase}}</td>
+    </tr>
+    <tr>
+      <td>Marital Status</td>
+      <td><input type="checkbox" name="mst" [(ngModel)]="employee.isMarried" /></td>
+      <td>{{employee.isMarried?'Married':'UnMarried'}}</td>
+    </tr>
+    <tr *ngIf="employee.isMarried">
+      <td>Spouse Name</td>
+      <td><input type="text" name="esp" [(ngModel)]="employee.spouse" /></td>
+      <td>{{employee.spouse | uppercase}}</td>
+    </tr>
+    <tr>
+      <td>Date Of Joining</td>
+      <td><input type="date" name="edoj" [(ngModel)]="dojString" 
+        (change)="updateDoj()"/></td>
+      <td>{{employee.doj | date : 'dd-MMM-yyyy'}}</td>
+    </tr>
+    <tr>
+      <td>Experience</td>
+      <td></td>
+      <td>{{employee.experience}} yrs</td>
+    </tr>
+    <tr >
+      <td>Designation</td>
+      <td>
+        <select name="edesg" [(ngModel)]="employee.designation">
+          <option value="">---Select----</option>
+          <option *ngFor="let possbDesg of possibleDesignations" 
+              [value]="possbDesg">
+              {{possbDesg}}
+          </option>
+        </select>
+      </td>
+      <td>{{employee.designation}}</td>
+    </tr>
+  </table>
+</form>
+

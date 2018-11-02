@@ -1,0 +1,30 @@
+  <table>   
+    <tr>
+      <td>Employee Id</td>
+      <td>{{empService.employee.empId | number : '3.0'}}</td>
+    </tr>
+    <tr>
+      <td>Employee Name</td>
+      <td>{{empService.employee.eName | uppercase}}</td>
+    </tr>
+    <tr>
+      <td>Marital Status</td>
+      <td>{{empService.employee.isMarried?'Married':'UnMarried'}}</td>
+    </tr>
+    <tr *ngIf="empService.employee.isMarried">
+      <td>Spouse Name</td>
+      <td>{{empService.employee.spouse | uppercase}}</td>
+    </tr>
+    <tr>
+      <td>Date Of Joining</td>
+      <td>{{empService.employee.doj | date : 'dd-MMM-yyyy'}}</td>
+    </tr>
+    <tr>
+      <td>Experience</td>
+      <td>{{empService.employee.experience}} yrs</td>
+    </tr>
+    <tr >
+      <td>Designation</td>
+      <td>{{empService.employee.designation}}</td>
+    </tr>
+  </table>

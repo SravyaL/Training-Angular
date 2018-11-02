@@ -1,0 +1,14 @@
+header{
+    border-bottom: 2px solid black;
+    text-align: left;
+    padding: 10px;
+    background-color: lightgrey;
+    height: 50px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+small{
+    font-style: italic;
+    font-size: 10px;
+}

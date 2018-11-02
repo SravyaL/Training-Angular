@@ -1,0 +1,29 @@
+<h3>Items List</h3>
+<table style="width:100%">
+  <thead>
+    <tr>
+      <th>Books</th>
+      <th>Name</th>
+      
+     
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <th colspan="4">{{items.length}} Items(s) found</th>
+    <th></th>
+  </tfoot>
+  <tbody>
+    <tr *ngFor="let x of items">
+      <td>{{x.id}}</td>
+      <td>{{x.name| uppercase}}</td>
+      <td>{{x.price| currency :'INR'}}</td>
+      <td>
+              <a class="btn" routerLink="/ivc/{{x.id}}">View</a>
+              <a class="btn" routerLink="/ie/{{x.id}}">Edit</a>
+              <a class="btn" (click)="deleteItem(x.id)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

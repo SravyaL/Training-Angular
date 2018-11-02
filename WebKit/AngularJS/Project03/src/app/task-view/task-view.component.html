@@ -1,0 +1,10 @@
+<div>
+  <span>{{task.taskId}}</span>
+  <span>{{task.name}}
+  <i *ngIf="task.isCompleted">&#10003;</i></span>
+  <!--<button (click)="markCompleted(true)" *ngIf="!task.isCompleted">Mark Completed</button>
+  <button *ngIf="task.isCompleted" (click)="markCompleted(false)">
+   Mark Incomplete
+  </button>-->
+  <button (click)="markCompleted(!task.isCompleted)">{{task.isCompleted?"Mark Incomplete":"Mark Complete"}}</button>
+</div>

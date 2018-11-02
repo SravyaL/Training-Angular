@@ -1,0 +1,93 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function showNumbers(){
+        t1 = document.getElementById("t1");
+        t2 = document.getElementById("t2");
+	res = document.getElementById("res");
+	r1 = document.getElementById("radio1");
+	r2 = document.getElementById("radio2");
+	r3 = document.getElementById("radio3");
+	chb1 = document.getElementById("chb1");
+	chb2 = document.getElementById("chb2");
+	ll = parseInt(t1.value);
+	ul = parseInt(t2.value);
+
+	sum =0;
+	prd =1;
+
+	if(ll>ul) {
+		alert("Incorrect lower and upper limits");
+	} else {
+		if(r1.checked){			
+			res.innerHTML = "<p>";
+			for(i=ll;i<=ul;i++){
+				res.innerHTML += i + ", ";
+				sum += i;
+				prd *= i;
+			}
+			res.innerHTML += "</p>";
+		} else if(r2.checked){
+			if(ll%2!=0) {
+				ll++;
+			}
+			res.innerHTML = "<p>";
+			for(i=ll;i<=ul;i+=2){
+				res.innerHTML += i + ", ";
+				sum += i;
+				prd *= i;
+			}
+			res.innerHTML += "</p>";
+		} else if(r3.checked) {
+			if(ll%2==0) {
+				ll++;
+			}
+			res.innerHTML = "<p>";
+			for(i=ll;i<=ul;i+=2){
+				res.innerHTML += i + ", ";
+				sum += i;
+				prd *= i;
+			}
+			res.innerHTML += "</p>";
+		}
+
+
+		if(chb1.checked){
+			res.innerHTML += "<p><strong>Sum is " + sum + "</strong></p>";
+		}	
+	
+		if(chb2.checked){
+			res.innerHTML += "<p><strong>Product is " + prd + "</strong></p>";
+		}	
+
+	}
+     }
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Loop Demo: </h3>
+	<p> Enter Lower Limit: <input type="text" id="t1" /> </p>
+      	<p> Enter Upper Limit: <input type="text" id="t2" /> </p>
+	<p> Choose Numbers Type:
+		<label><input type="radio" id="radio1" name="numType"/> All Natural Numbers </label>
+		<label><input type="radio" id="radio2" name="numType"/> Even Natural Numbers </label>
+		<label><input type="radio" id="radio3" name="numType"/> Odd Natural Numbers </label>	 
+	</p>
+	<p><label><input type="checkbox" id="chb1" />Display their sum. </label></p>
+	<p><label><input type="checkbox" id="chb2" />Display their product. </label></p>
+	<p> <input type="button" value="Generate" onClick="showNumbers()" /> </p>
+    </form>
+
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

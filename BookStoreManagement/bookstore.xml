@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_60" class="java.beans.XMLDecoder">
+ <object class="java.util.TreeMap">
+  <void method="put">
+   <string>B101</string>
+   <object class="in.techpinnacle.bsm.dto.Book">
+    <void property="bcode">
+     <string>B101</string>
+    </void>
+    <void property="price">
+     <double>1111.0</double>
+    </void>
+    <void property="title">
+     <string>LetUsStay</string>
+    </void>
+    <void property="volume">
+     <int>1</int>
+    </void>
+    <void property="zonar">
+     <object class="java.lang.Enum" method="valueOf">
+      <class>in.techpinnacle.bsm.dto.Zonar</class>
+      <string>FICTION</string>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

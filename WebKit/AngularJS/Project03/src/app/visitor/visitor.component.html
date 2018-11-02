@@ -1,0 +1,38 @@
+<h3>Employee Form</h3>
+<form>
+  <div>
+    <label>Employee ID</label>
+    <input type="text" name="tlt" [(ngModel)]="visitor.title"/>
+  </div>
+
+  <div>
+    <label>First Name:</label>
+    <input type="text" name="unm" [(ngModel)]="visitor.firstName"/>
+  </div>
+
+  <div>
+    <label>Last Name:</label>
+    <input type="text" name="lnm" [(ngModel)]="visitor.lastName"/>
+  </div>
+
+  
+
+  <div>
+    <label>Spouse Name:</label>
+    <input type="text" name="unm" [(ngModel)]="visitor.spouse"/>
+  </div>
+</form>
+<h3>
+  Visitor Details</h3>
+
+  <table>
+    <tr><th>Full Name</th>
+      <th>Marital Status</th>
+      </tr>
+      <tr>
+        <td>{{visitor.title}} {{visitor.firstName}}  {{visitor.lastName}}  </td>
+        <td>
+          {{visitor.isMarried?"Married to "+ visitor.spouse:"Not Married"}}
+        </td>
+      </tr>
+  </table>

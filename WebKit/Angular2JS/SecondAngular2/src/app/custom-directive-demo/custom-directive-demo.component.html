@@ -1,0 +1,16 @@
+<h3 [appToday]="'local-date'">LocalDate: </h3>
+<h3 [appToday]="'local-time'">LocalTime: </h3>
+<h3 [appToday]="'iso'">ISO Format: </h3>
+<h3 [appToday]>Default format: </h3>
+
+<div>
+  Select a Format : 
+  <select [(ngModel)]="dtFormat">
+    <option value="">Default</option>
+    <option value="iso">ISO Format</option>
+    <option value="local-date">Local Date Format</option>
+    <option value="local-time">Local Time Format</option>
+  </select>
+  <h3>{{dtFormat}} </h3>
+  <h3 [appToday]="dtFormat"> </h3>
+</div>

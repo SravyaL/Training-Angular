@@ -1,0 +1,47 @@
+<section>
+
+  <header>
+    <h1>Todo</h1>
+    <input 
+           placeholder="Enter ne wtask"
+           [(ngModel)]="newTodo"
+           (keyup.enter)="addTodo()"
+           autofocus>
+  </header>
+
+  <section>
+
+    
+    <ul >
+      <li *ngFor="let todo of todos">
+        <div >
+          <input type="checkbox" [checked]="todo.isDone">
+          <label (dblclick)="todo.editing = true">{{todo.title}}</label>
+          <button (click)="destroyTodo(todo)"></button>
+        </div>
+        <input
+               #updatedTodo
+               [value]="todo.title"
+               (blur)="updateTodo(todo, updatedTodo.value)"
+               (keyup.escape)="todo.editing = false"
+               (keyup.enter)="updateTodo(todo, updatedTodo.value)">
+      </li>
+    </ul>
+  </section>
+
+  <footer >
+    <span><strong>{{activeTasks}}</strong> item left</span>
+    <ul>
+      <li>
+        <a [routerLink]="['/all']" >All</a>
+      </li>
+      <li>
+        <a [routerLink]="['/active']" >Active</a>
+      </li>
+      <li>
+        <a [routerLink]="['/completed']" >Completed</a>
+      </li>
+    </ul>
+    <button (click)="clearCompleted()">Clear completed</button>
+  </footer>
+</section>

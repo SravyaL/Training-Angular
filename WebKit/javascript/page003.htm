@@ -1,0 +1,28 @@
+ <!DOCTYPE HTML>
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+    function doTask(){
+		r=document.getElementById("res");
+		r.innerHTML="The button is clicked";
+    }                                                          
+   </script>
+  </head>
+  <body>    
+
+    <h2> Event Handling </h2>
+
+    <form>
+      <h3> Click the button below </h3>
+      <button type="button" onClick="doTask()" >Click Me </button>
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res" ></span>
+    </div>
+  </body>
+ </html>
+

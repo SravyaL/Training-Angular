@@ -1,0 +1,26 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page2</title>
+   <link rel="stylesheet" href="style1.css"  />
+   <script language="javascript">
+   
+	var doEval = function(){
+		var txtExpr = document.getElementById("txtExpr");
+		var expr = txtExpr.value;
+		alert(eval(expr));
+	}
+		
+   </script>
+  </head>
+  <body>
+	<form>
+		<label> Enter Javascriot Expression: 
+			<input type="text" id="txtExpr" />
+		</label>
+		<button type="button" id="btn1" onclick="doEval()">Evaluate</button>
+	</form>
+  </body>
+ </html>
+

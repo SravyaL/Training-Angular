@@ -1,0 +1,28 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function compute(){
+        t1 = document.getElementById("t1");
+        res = document.getElementById("res");
+        res.innerHTML = eval(t1.value);
+     }
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Evaluator </h3>
+      Enter any expression: <input type="text" id="t1" size="80" />
+      <button type="button" onClick="compute()">Compute</button>
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

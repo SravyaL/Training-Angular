@@ -1,0 +1,62 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function computeSI(){
+      	t1 = document.getElementById("t1");
+      	t2 = document.getElementById("t2");
+      	t3 = document.getElementById("t3");
+      	pType = document.getElementById("periodType");
+      	resDy  = document.getElementById("resDy");
+	resWk  = document.getElementById("resWk");
+	resMn  = document.getElementById("resMn");
+	resYr  = document.getElementById("resYr");
+
+	prin = parseFloat(t1.value);
+	rate = parseFloat(t2.value);
+	timePeriod = parseFloat(t3.value);
+
+	var perDayIntrest = 0;
+	switch(pType.selectedIndex){
+	case 0: perDayInterest = (prin*rate*timePeriod)/100; break;
+	case 1: perDayInterest = (prin*(rate/7)*timePeriod)/100; break;
+	case 2: perDayInterest = (prin*(rate/30)*timePeriod)/100; break;
+	case 3: perDayInterest = (prin*(rate/365)*timePeriod)/100; break;
+	}
+
+	resDy.innerHTML = perDayInterest;
+	resWk.innerHTML = perDayInterest*7;
+	resMn.innerHTML = perDayInterest*30;
+	resYr.innerHTML = perDayInterest*365;			
+     }
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Simple Interest Caliculator </h3>
+      Principal: <input type="text" id="t1" />  <br />
+      Rate: <input type="text" id="t2" />  <br />
+      Period: <input type="text" id="t3" />
+		<select id="periodType">
+                  <option value="dy">Day</option>
+                  <option value="wk">Week</option>
+                  <option value="mn">Month</option>
+                  <option value="yr">Year</option>
+                 </select>
+	<br />
+	<input type="button" value="Compute" onClick="computeSI()" />
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <p>Simple Interest per Day <span id="resDy"></span> </p>
+      <p>Simple Interest per Week <span id="resWk"></span> </p>
+      <p>Simple Interest per Month <span id="resMn"></span> </p>
+      <p>Simple Interest per Year <span id="resYr"></span> </p>
+    </div>
+  </body>
+ </html>
+

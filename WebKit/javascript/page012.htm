@@ -1,0 +1,40 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     var handle;
+
+     function timer(){
+       d = new Date();
+       res = document.getElementById("res");
+       res.innerHTML =d;
+       
+     }
+
+     function startTimer(){
+       handle = setInterval("timer()",1);
+     }
+
+     function stopTimer(){
+      clearInterval(handle);
+     }
+
+   </script>                          
+  </head>
+  <body>    
+    <form>
+      <h3> Set and Clear Intervals </h3>
+      <input type="button" value="Start Timer" onClick="startTimer()" />
+      <input type="button" value="Stop Timer" onClick="stopTimer()" />
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res" style="font-size:50;font-family:'Arial Black'"></span>
+    </div>
+  </body>
+ </html>
+

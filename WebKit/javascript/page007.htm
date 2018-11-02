@@ -1,0 +1,42 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function showNumbers(){
+        t1 = document.getElementById("t1");
+        t2 = document.getElementById("t2");
+		res = document.getElementById("res");
+
+		ll = parseInt(t1.value);
+		ul = parseInt(t2.value);
+
+		if(ll>ul) {
+			alert("Incorrect lower and upper limits");
+		} else {
+			res.innerHTML = "<p>";
+			for(i=ll;i<=ul;i++){
+				res.innerHTML += i + ", ";
+			}
+			res.innerHTML += "</p>";
+		}
+     }
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Loop Demo: </h3>
+	<p> Enter Lower Limit: <input type="text" id="t1" /> </p>
+      	<p> Enter Upper Limit: <input type="text" id="t2" /> </p>
+	<p> <input type="button" value="Generate Numbers" onClick="showNumbers()" /> </p>
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

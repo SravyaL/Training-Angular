@@ -1,0 +1,32 @@
+<div>
+  <h3>Text Based Pipes</h3>
+  <p>{{textData}}</p>
+  <p>{{textData | lowercase}}</p>
+  <p>{{textData | uppercase}}</p>
+
+  <h3>Date Based Pipes</h3>
+  <p>{{dateData}}</p>
+  <p>{{dateData | date : 'dd-MMM-yyyy'}}</p>
+  <p>{{dateData | date : 'MMM dd, yyyy'}}</p>
+  <p>{{dateData | date : 'dd-MM-yy hh:mm:ss'}}</p>
+</div>
+<div>
+  <h3>Number Based Pipes</h3>
+  <p>{{numericData}}</p>
+    
+  <p>{{numericData | number :'3.0-0'}}</p>
+  <p>{{numericData | number :'3.0-1'}}</p>
+  <p>{{numericData | number :'3.0-4'}}</p>
+  <p>{{numericData | number :'3.0-8'}}</p>
+  
+  <p>{{numericData | percent :'3.0-1'}}</p>
+</div>
+<div>
+  <h3>Currency Based Pipes</h3>
+  <p>{{numericData | currency :'INR':true}}</p>
+  <p>{{numericData | currency :'USD':true}}</p>
+  <p>{{numericData | currency :'AUD':true}}</p>
+  <p>{{numericData | currency :'EUR':true}}</p>
+  <p>{{numericData | currency :'AED':true}}</p>
+</div>
+<div class="clearAll"></div>

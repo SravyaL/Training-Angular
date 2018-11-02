@@ -1,0 +1,22 @@
+
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     document.writeln("<table border='3' style='width:250px;margin:auto'>");
+	 document.writeln("<tr><th>ID</th><th>Code</th><th>Entity</th></tr>");
+	 for(i=0;i<=1023;i++){
+		document.writeln("<tr><td>"+i+"</td>");
+		document.writeln("<td>&amp;#"+i+";</td>");
+		document.writeln("<th>&#"+i+";</th></tr>");
+	 }
+	 document.writeln("</table>");
+   </script>
+  </head>
+  <body>    
+  </body>
+ </html>
+

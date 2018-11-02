@@ -1,0 +1,42 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+    function validate(){
+		q = document.getElementById("q");
+
+		var isValid=true;
+
+		err.innerHTML="<ol>";
+		if(q.value.trim().length==0){
+			err.innerHTML="<li>Please Enter a Search Query</li>";
+			isValid=false;
+		}
+
+      err.innerHTML += "</ol>";
+      return isValid;
+    }
+   </script>                          
+  </head>
+  <body>    
+
+    <form action="http://www.google.com" method="GET" onsubmit="return validate()">
+      <h3> Sample Validation </h3>
+      <span id="err"></span> <br />
+      <input type="text" name="q" id="q" value="" size="120"/>
+      <input type="submit" />
+    </form>
+
+	
+    <form action="http:\\www.google.com" method="GET">
+      <h3> Sample Validation </h3>
+      <input type="text" name="q" id="q" value="" size="120" required/>
+      <input type="submit" />
+    </form>
+	
+  </body>
+ </html>
+

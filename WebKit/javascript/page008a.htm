@@ -1,0 +1,59 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+
+	myArray = ["apple"];
+
+	function displayArray(){
+		res = document.getElementById("res");
+		res.innerHTML = "<ol>";
+		for(i=0;i<myArray.length;i++){
+			res.innerHTML += "<li>"+myArray[i] +"</li>";
+		}
+		res.innerHTML += "</ol>";
+	}
+
+	function addElement(){
+		t1 = document.getElementById("t1");
+		myArray.push(t1.value);
+		t1.value="";
+		displayArray();
+	}
+
+	function removeElement(){
+		myArray.pop();
+		displayArray();
+	}
+
+	function sortElements(){
+		myArray.sort();
+		displayArray();
+	}
+		
+   </script>
+  </head>
+  <body onload="displayArray()">    
+     
+	<form>
+		<p>Enter an element: 
+			<input type="text" id="t1" /> 
+			<button type="button" onclick="addElement()">ADD</button> 
+		</p>
+
+		<p>	
+		 <button type="button" onclick="removeElement()" >Remove Last</button> 
+		 <button type="button" onclick="sortElements()">Sort</button> 
+		</p>
+	</form>
+
+	<div class="result">
+		<h3>Look Here For Result</h3>
+		<span id="res"></span>
+	</div>
+  </body>
+ </html>
+

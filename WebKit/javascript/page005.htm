@@ -1,0 +1,83 @@
+
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function sum(){
+      t1 = document.getElementById("t1");
+      t2 = document.getElementById("t2");
+      res =  document.getElementById("res");
+
+      op1 = parseFloat(t1.value);
+      op2 = parseFloat(t2.value);
+
+      res.innerHTML = "<b>Sum : " + (op1+op2) + "</b>"
+     }
+
+     function diff(){
+      t1 = document.getElementById("t1");
+      t2 = document.getElementById("t2");
+      res =  document.getElementById("res");
+
+      op1 = parseFloat(t1.value);
+      op2 = parseFloat(t2.value);
+
+      res.innerHTML = "<b>Difference : " + (op1-op2) + "</b>"
+     }
+
+     function prd(){
+      t1 = document.getElementById("t1");
+      t2 = document.getElementById("t2");
+      res =  document.getElementById("res");
+
+      op1 = parseFloat(t1.value);
+      op2 = parseFloat(t2.value);
+
+      res.innerHTML = "<b>Product : " + (op1*op2) + "</b>"
+     }
+
+     function qut(){
+      t1 = document.getElementById("t1");
+      t2 = document.getElementById("t2");
+      res =  document.getElementById("res");
+
+      op1 = parseFloat(t1.value);
+      op2 = parseFloat(t2.value);
+
+      res.innerHTML = "<b>Quotient : " + (op1/op2) + "</b>"
+     }
+
+     function rem(){
+      t1 = document.getElementById("t1");
+      t2 = document.getElementById("t2");
+      res =  document.getElementById("res");
+
+      op1 = parseFloat(t1.value);
+      op2 = parseFloat(t2.value);
+
+      res.innerHTML = "<b>Reminder : " + (op1%op2) + "</b>"
+     }
+
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Arithmetic Operations </h3>
+      Operand1: <input type="number" id="t1" />  <br />
+      Operand2: <input type="number" id="t2" />  <br />
+      <button type="button" onClick="sum()" >Add</button>
+      <button type="button" onClick="diff()" >Substract</button>
+      <button type="button" onClick="prd()" >Multiply</button>
+      <button type="button" onClick="qut()" >Dvivide</button>
+      <button type="button" onClick="rem()" >Modulo</button>
+    </form>                  
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

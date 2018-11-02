@@ -1,0 +1,28 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+    function doTask(){
+       t1 = document.getElementById("t1");
+       r  = document.getElementById("res");
+
+       r.innerHTML="Hello! " + t1.value;
+    }                                                          
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Fill in the form </h3>
+      <label> Enter Name: <input type="text" id="t1" /> </label>
+      <button type="button" onClick="doTask()" >Click Me</button>
+    </form>                  
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

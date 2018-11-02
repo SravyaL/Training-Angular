@@ -1,0 +1,30 @@
+ table{   
+     border : 1px solid black; 
+    padding: 5px;  
+      width: 100%;
+    }
+      
+    td,tr,th{ 
+
+           border-bottom: .75px dashed black; 
+        }
+    td{   
+         text-align: right; 
+          width:18.75%;}
+     td:nth-child(2)
+        { 
+        text-align:left;  
+         width: 25%;
+        
+        }
+        tfoot tr,tfoot th
+        {  
+            border-bottom: 0px;
+        } 
+
+        .btn{
+            background-color: darkred;
+            color: floralwhite;
+            cursor: pointer;
+            text-decoration: none;
+        }

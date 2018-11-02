@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Hotel Reservation</title>
+        <script src="../scripts/assignment.js"></script>
+    </head>
+    <body onload="main()">
+        <ol id="errors">
+        </ol>
+        <form action="Page01.htm" id="regForm" onsubmit="return validateForm();">
+            <div>
+                <label>Guest Name:</label>
+                <input type="text" id="f1" placeholder="Name of Guest"/>
+            </div>
+            <div>
+                    <label>No of adults</label>
+                    <input type="number" id="f2" placeholder="Number of Adults"/>
+            </div>
+            <div>
+                    <label>No of children:</label>
+                    <input type="number" id="f3" placeholder="Number of Children"/>
+            </div>
+            <div>
+                    <label>Type of room:</label>
+                    <input type="text" list="rooms" id="f4" placeholder="Type of room"/>
+                    <datalist id="rooms">
+                        <option value=""></option>
+                        <option value="AC"/>
+                        <option value="Non AC"/>
+                        <option value="Suite"/>
+                        <option value="AC Extra Bed"/>
+                    </datalist>
+            </div>
+            <div>
+                    <label>No of days:</label>
+                    <input type="number" id="f5" placeholder="Number of Days"/>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" id="chk1"/>
+                    Accept terms and conditions  
+                </label>
+                    
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+
+        </form>
+    </body>
+</html>

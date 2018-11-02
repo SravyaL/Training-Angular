@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Validation Demo</title>
+		<script src="validationScript.js"></script>
+	</head>
+	<body>
+		<h2>Please login</h2>
+		<form 	onSubmit="return validateLogInForm()"
+				action="someServerProg"
+				method="POST"
+		>
+		 <table>
+			<tr><td><label for="txtUnm">UserName:</label></td>
+				<td><input
+						type="text"	id="txtUnm" 
+						placeholder="Vehicle RegNo. or Mobile" required/>
+					<span id="unmErr"></span>
+				</td>
+			</tr>
+			<tr><td><label for"txtPwd">Password:</label></td>
+				<td><input
+						type="password" id="txtPwd"  required />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:right">
+					<button type="submit">LogIn</button>
+				</td>
+			</tr>
+		 </table>
+		</form>
+	</body>
+</html>

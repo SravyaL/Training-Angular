@@ -1,0 +1,48 @@
+<h3>Book List</h3>
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Eid</th>
+      <th>Name</th>
+      <th>Basic</th>
+      <th>Hra</th>
+      <th>Dept</th>
+
+    </tr>
+  </thead>
+  <tbody> -->
+    <!-- <tr *ngFor ="let x of books" (click)="showBook(x.eid)">
+      <td>{{x.eid}}</td>
+      <td>{{x.name}}</td>
+      <td>{{x.basic}}</td>
+      <td>{{x.hra}}</td>
+      <td>{{x.dept}}</td>
+    </tr>
+  </tbody>
+</table> -->
+<div class="dashboard">
+  <div>
+    <img [src]="bookIcon"/>Hard copies:
+    <span>{{books|typeCount:'CSE'}}</span>
+  </div>
+  <div>
+    <img [src]="cdIcon"/>Digital copies:
+    <span>{{books|typeCount:'ECE'}}</span>
+  </div>
+</div>
+<div class="booksList">
+<div class="bookCard" *ngFor ="let x of books" (click)="showBook(x.eid)">
+  <div class="typeIcon">
+    <img [src]="x.dept=='CSE'?bookIcon:cdIcon"/>
+</div> 
+  <div class="bookDetails">
+  <span>{{x.eid}}</span>
+  <span>{{x.name}}</span>
+  <span>{{x.basic}}</span>
+  <span>{{x.hra}}</span>
+  <span>{{x.dept}}</span>
+  </div>
+  
+</div>
+<div class="clear"></div>
+</div>

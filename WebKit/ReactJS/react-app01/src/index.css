@@ -1,0 +1,14 @@
+*{
+  margin: 5px;
+  padding: 5px;
+}
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+
+tr:hover{
+  background-color: beige;
+}

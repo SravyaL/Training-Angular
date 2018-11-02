@@ -1,0 +1,1 @@
+{"version":3,"sources":["module1.js"],"names":[],"mappings":";AAAO,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;IACZ,CAAC,CAAC,CAAC,CAAC,IAAG;QACH,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;IAChB;AACJ","file":"dest\\module1.js","sourceRoot":"/","sourcesContent":["export class Box{\r\n    print(){\r\n        return \"Box\";\r\n    }\r\n}"]}

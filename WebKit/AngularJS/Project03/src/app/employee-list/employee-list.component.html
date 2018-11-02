@@ -1,0 +1,31 @@
+<h3>Employee List</h3>
+<table style="width:100%">
+  <thead>
+    <tr>
+      <th>Employee ID</th>
+      <th>Name</th>
+      <th>Basic</th>
+      <th>HRA</th>
+      <th>Department</th>
+     <!-- <th>Action</th>-->
+    </tr>
+  </thead>
+  <tfoot>
+    <th colspan="4">{{emps.length}} Employee(s) found</th>
+    <th></th>
+  </tfoot>
+  <tbody>
+    <tr *ngFor="let x of emps">
+      <td>{{x.eid | number: '1.0-0'}}</td>
+        <td>{{x.ename| uppercase}}</td>
+          <td>{{x.basic| currency :'INR' }}</td>
+            <td>{{x.hra | percent}}</td>
+              <td>{{x.edept | titlecase}}</td>
+            <!--  <td>
+              <a class="btn" routerLink="/ivc/{{x.eid}}">View</a>
+              <a class="btn" routerLink="/ie/{{x.eid}}">Edit</a>
+              <a class="btn" (click)="deleteItem(x.eid)">Delete</a>
+              </td>-->
+    </tr>
+  </tbody>
+</table>

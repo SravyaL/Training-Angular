@@ -1,0 +1,42 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function analyze(){
+        t1 = document.getElementById("t1");
+        t2 = document.getElementById("t2");
+        res = document.getElementById("res");
+
+        x = parseFloat(t1.value);
+        y = parseFloat(t2.value);
+
+        res.innerHTML =
+        "<b>     round(x): "  + Math.round(x) +
+        "<br />  ceil(x): "  + Math.ceil(x) +
+        "<br />  floor(x): "  + Math.floor(x) +
+        "<br />  log(x): "  + Math.log(x) +
+        "<br />  exp(x): "  + Math.exp(x) +
+        "<br />  x<sup>y</sup>: "  + Math.pow(x,y) +
+        "</b>" ;
+        
+     }
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Math Functions Demo </h3>
+      x: <input type="text" id="t1" />
+      y: <input type="text" id="t2" />
+      <button type="button" onClick="analyze()" >APPLY</button>
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

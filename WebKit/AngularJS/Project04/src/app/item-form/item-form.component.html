@@ -1,0 +1,23 @@
+<h3>New Book</h3>
+<form>
+  <div>
+    <label>Book Id</label>
+    <input type="number" name="ino"[(ngModel)]="item.id"
+    readonly="{{isEdit?'readonly':''}}"
+    />
+  </div>
+  <div>
+      <label>Book Name</label>
+      <input type="text" name="inm"[(ngModel)]="item.name"/>
+    </div>
+    
+    <div>
+        <label>Book Price</label>
+        <input type="number" name="irt"[(ngModel)]="item.price"/>
+      </div>
+      
+        <div>
+          <button type="button" (click)="cancel()">Cancel</button>
+          <button type="button" (click)="save()">save</button>
+        </div>
+</form>

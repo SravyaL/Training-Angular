@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test form valdiation</title>
+	</head>
+	<body>
+		<h2>Search some thing</h2>
+		     
+		<form action="http://www.google.in" mehtod="GET">
+			<label for="qTxt" >Type Your Query</label>
+			<input type="texT" id="qTxt" name="q" required />
+			<button type="submit">Launch Google</button>
+		</form>
+		<br /><br /><br /><br /><br />
+		<form action="http://www.google.in" method="GET">
+			<label for="qTxt" >Type Your Query</label>
+			<input type="texT" id="qTxt" name="q" required 
+				oninvalid="this.setCustomValidity('Please enter a query')"
+				oninput="setCustomValidity('')"
+			/>
+			<label for="nTxt" >Enter a random number</label>
+			<input type="number" min="45" max="67" 
+				id="nTxt" name="n" 
+				oninvalid="this.setCustomValidity('45 to 67 only')"
+				oninput="setCustomValidity('')"
+			/>
+			<button type="submit">Launch Google</button>
+		</form>
+	</body>
+</html>
+
+
+<!-- 
+document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.getElementsByTagName("INPUT");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].oninvalid = function(e) {
+            e.target.setCustomValidity("");
+            if (!e.target.validity.valid) {
+                e.target.setCustomValidity("This field cannot be left blank");
+            }
+        };
+        elements[i].oninput = function(e) {
+            e.target.setCustomValidity("");
+        };
+    }
+})
+-->

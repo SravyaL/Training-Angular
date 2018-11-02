@@ -1,0 +1,38 @@
+<form>
+  <table>
+    <tr>
+      <td>Employee Id</td>
+      <td><input type="number" name="eid" [(ngModel)]="empService.employee.empId" /></td>
+    </tr>
+    <tr>
+      <td>Employee Name</td>
+      <td><input type="text" name="enm" [(ngModel)]="empService.employee.eName" /></td>
+    </tr>
+    <tr>
+      <td>Marital Status</td>
+      <td><input type="checkbox" name="mst" [(ngModel)]="empService.employee.isMarried" /></td>
+    </tr>
+    <tr *ngIf="empService.employee.isMarried">
+      <td>Spouse Name</td>
+      <td><input type="text" name="esp" [(ngModel)]="empService.employee.spouse" /></td>
+    </tr>
+    <tr>
+      <td>Date Of Joining</td>
+      <td><input type="date" name="edoj" [(ngModel)]="dojString" 
+        (change)="updateDoj()"/></td>
+    </tr>
+    <tr >
+      <td>Designation</td>
+      <td>
+        <select name="edesg" [(ngModel)]="empService.employee.designation">
+          <option value="">---Select----</option>
+          <option *ngFor="let possbDesg of possibleDesignations" 
+              [value]="possbDesg">
+              {{possbDesg}}
+          </option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</form>
+

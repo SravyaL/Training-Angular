@@ -1,0 +1,1 @@
+console.log("Hello world! Welcome to JavaScript[ES6]"); //singlelinescript

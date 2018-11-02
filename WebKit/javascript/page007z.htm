@@ -1,0 +1,49 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function findFactors(){
+        t1 = document.getElementById("t1");
+        res = document.getElementById("res");
+
+        num = parseInt(t1.value);
+
+        count =2;
+
+        res.innerHTML = "Factors are: 1,";
+
+        for(i=2;i<=num/2;i++){
+          if(num%i==0){
+            count++;
+            res.innerHTML += i + ",";
+          }
+        }
+
+        res.innerHTML += num;
+
+        if(count==2){
+           res.innerHTML += "<br /> <b>It is a prime number! </b>";
+        }
+        else {
+           res.innerHTML += "<br /> <b>It is a composite number! </b>";
+        }
+     }
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Finding Factors </h3>
+      Enter a Number: <input type="text" id="t1" />
+      <input type="button" value="Factors?" onClick="findFactors()" />
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

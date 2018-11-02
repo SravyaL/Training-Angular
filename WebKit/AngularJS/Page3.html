@@ -1,0 +1,27 @@
+<html ng-app="cgDemoApp">
+	<head>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/myscript.js"></script>
+	</head>
+	<body ng-controller="ctrl1">
+		<div style="border-bottom:1px solid black">
+			<h2>{{appTitle}}</h2>
+			<h3>Call Me On {{contacts[0]}} |
+				WhatsApp Me On {{contacts[1]}}</h3>
+		</div>
+		<div>
+			Enter a number: <input type="number" ng-model="a" /> <br />
+			Enter b number: <input type="number" ng-model="b" /> <br />
+			<input type="checkbox" ng-model="f1" />Show Sum
+			<input type="checkbox" ng-model="f2" />Show Difference
+			<input type="checkbox" ng-model="f3" />Show Product
+			<input type="checkbox" ng-model="f4" />Show Quitiont
+			<input type="checkbox" ng-model="f5" />Show Reminder
+			<p ng-show="f1">Sum is {{a+b}}</p>
+			<p ng-show="f2">Difference is {{a-b}}</p>
+			<p ng-show="f3">Product is {{a*b}}</p>
+			<p ng-show="f4">Quitiont is {{a/b}}</p>
+			<p ng-show="f5">Reminder is {{a%b}}</p>
+		</div>
+	</body>
+</html>

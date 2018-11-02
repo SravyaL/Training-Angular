@@ -1,0 +1,41 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+	function checkEO(){
+		t1 = document.getElementById("t1");
+		r  = document.getElementById("res");
+
+		x = parseInt(t1.value);
+
+		if(x%2==0){
+			r.innerHTML = x + "is even";
+		} else {
+			r.innerHTML = x + "is odd";
+		}
+
+		if(x>=0){
+			r.innerHTML += "<br />" + x + "is positive";
+		} else {
+			r.innerHTML += "<br />" + x + "is nagative";
+		}
+	}     
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> check for even or odd and Positve or negative </h3>
+	Enter a number: <input type="text" id="t1" /> 
+	<button type="button" onClick="checkEO()" >Check</button>
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <p><span id="res"></span> </p>
+    </div>
+  </body>
+ </html>
+

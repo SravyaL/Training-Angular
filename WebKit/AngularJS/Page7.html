@@ -1,0 +1,29 @@
+<html ng-app="cgDemoApp">
+	<head>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/myscript.js"></script>
+	</head>
+	<body>
+		<div style="border-bottom:1px solid black" ng-controller="ctrl1">
+			<h2>{{appTitle}}</h2>
+			<h3>Call Me On {{contacts[0]}} |
+				WhatsApp Me On {{contacts[1]}}</h3>
+		</div>
+		<div ng-controller="ctrl2">
+			<Button ng-click="sayHello()">Click Me</Button>
+			<Button ng-dblclick="sayGoodBye()">Double Click Me</Button>
+			
+			<p style="height:200px;border:1px dashed black;margin:20px;"
+				ng-mouseenter="changeStatus('Mouse Entered')"
+				ng-mouseleave="changeStatus('Mouse Left')"
+				ng-mouseover="changeStatus('Mouse Is over me')"
+				ng-mouseup="changeStatus('Mouse button is lifted')"
+				ng-mousedown="changeStatus('Mouse button is held down')"
+				ng-mousemove="changeStatus('Mouse is moving over me')"
+			>
+				<span>{{status}}</span>
+			</p>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,49 @@
+
+	*{
+		padding:5px;
+		margin:	2px;
+	}
+	
+	.formHolder{
+		margin:auto;
+		width:500px;
+		border: 2px solid black;
+		border-radius: 20px;
+	}
+	
+	.formHolder h1,.formHolder h2,.formHolder h3,.formHolder h4,.formHolder h5,.formHolder h6{
+		text-align:center;
+		border-bottom: 1px solid black;
+	}
+	
+	.formHolder table{
+		width:100%;
+	}
+	
+	.formHolder table tr td{
+		border-bottom: 0.5px dashed black;
+	}
+	
+	.formHolder table tr td:first-child{
+		font-weight:800;
+	}
+	
+	.formHolder table tr:last-child td{
+		border-bottom: 0px;
+		text-align:right;
+	}
+	
+	.formHolder button{
+		color:#ffffff;
+		border-radius:10px;
+		padding:15px;
+		font-weight:800;
+	}
+	
+	.formHolder button[type="reset"]{
+		background-color:#ff0000;				
+	}
+	
+	.formHolder button[type="submit"]{
+		background-color:#0000ff;		
+	}

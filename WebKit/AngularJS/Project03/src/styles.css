@@ -1,0 +1,44 @@
+*{
+    margin:5px;
+    padding:10px;
+}
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: darkgrey;
+    border-radius:5px;
+    font-weight:bolder; 
+}
+nav a:hover{
+   zoom: 105%;
+
+}
+body{
+    background-color: darkblue;
+}
+header{
+    margin-bottom: 0px;
+    border-radius: 5px;}
+    footer{margin-top:0px;
+        margin-bottom: 0px;
+        border-radius: 5px;}
+    
+header,footer{
+    min-height: 150px;
+    background-color: beige;
+    color:black;
+}
+nav{
+min-height: 150px;
+    background-color: beige;
+    color:black;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+main{
+    min-height: 150px;
+        background-color: chocolate;
+        color:black;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }

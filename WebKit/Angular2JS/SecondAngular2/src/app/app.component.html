@@ -1,0 +1,21 @@
+<header>
+  <h1>{{title}}<small>{{version}}</small></h1>
+  <p>Mail me at :<strong>{{adminEmail}}</strong></p>
+  <p>Call us at : <strong>{{contacNumbers[0]}}, {{contacNumbers[1]}}</strong></p>
+</header>
+<nav>
+  <a routerLink="">Home</a> <span>|</span>
+  <a routerLink="editEmp">Edit Employee</a> <span>|</span>
+  <a routerLink="getEmp">Display Employee</a> <span>|</span>
+  <a routerLink="customDir">Custom Directive</a> <span>|</span>
+  <a routerLink="customPipe">Custom Pipe</a> <span>|</span>
+  <a routerLink="builtInPipe">Built In Pipes</a> <span>|</span>
+  <a routerLink="books">Books Grid</a> <span>|</span>
+  <a routerLink="addbook">New Book</a> <span>|</span>
+</nav>
+<section>
+  <router-outlet></router-outlet>
+</section>
+<footer>
+  &copy; All Rights Reserved! 2018-Vamsy Workshop
+</footer>

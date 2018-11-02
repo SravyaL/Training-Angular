@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Page 06</title>
+		<link rel="stylesheet" href="mystyle.css"/>
+		<script language="javascript" 
+		src="flowerInventoryCode.js"></script>
+	</head>
+	<body onload="init()">		
+			<table>
+				<thead>
+					<tr><th>Flower</th>
+						<th>Code</th>
+						<th>Rate</th>
+						<th>Qty</th>
+						<th>Cost</th>
+						<th>Action</th>
+					</tr>
+					
+					<tr>	<form>			
+						<td><select id="selItemName" onchange="getItemDetails()">
+								<option>----Select-----</option>
+							</select>
+						</td>
+						<td><span id="spICode"></span></td>
+						<td><span id="spRate"></span></td>
+						<td><input type="number" id="txtQty" onchange="computeCost()" min="2" max="20"/></td>
+						<td><span id="spCost"></span></td>
+						<td><button type="button" onclick="addItem()">Add Item</button></td>
+					
+					</form></tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="4">Total Bill Amount</td>
+						<td id="tdBillAmt"></td>
+						<td></td>
+					</tr>
+				</tfoot>
+				<tbody id="tbodyItems">
+				</tbody>
+			</table>
+		
+	</body>
+</html>

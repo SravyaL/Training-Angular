@@ -1,0 +1,40 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page2</title>
+   <link rel="stylesheet" href="style1.css"  />
+   <script language="javascript">
+   
+		var sayHello = function(){
+			return "Hello";
+		}
+   
+		var sayNamasthe = function(){
+			return "Namasthe";
+		}
+		
+		function greetUser(userName,greetingProvider){
+			var greeting = greetingProvider();
+			alert(greeting + " " + userName);
+		}
+		
+		function doGreet1(){
+			var txtUnm = document.getElementById("txtUnm");
+			var unm = txtUnm.value;
+			//greetUser(unm,sayHello);
+			greetUser(unm,sayNamasthe);
+		}
+		
+   </script>
+  </head>
+  <body>
+	<form>
+		<label> Enter User Name: 
+			<input type="text" id="txtUnm" />
+		</label>
+		<button type="button" id="btn1" onclick="doGreet1()">Greet</button>
+	</form>
+  </body>
+ </html>
+

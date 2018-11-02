@@ -1,0 +1,28 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JSON Objects</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+   	function draw() {
+		var canvas = document.getElementById("cv1");
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = "#FF0000";
+		ctx.fillRect(10,10,25,25);
+		
+		ctx.moveTo(10,40);
+		ctx.lineTo(35,65);
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.arc(20,75,10,0,2*Math.PI);
+		ctx.stroke();
+	}
+   </script>                          
+  </head>
+  <body onload="draw()">    
+	<canvas id="cv1" style="width:1000px;height:500px;background-color:#ffffff;border: 1px solid black"></canvas>
+  </body>
+ </html>
+

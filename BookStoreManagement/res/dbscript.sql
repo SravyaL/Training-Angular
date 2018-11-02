@@ -1,0 +1,8 @@
+CREATE TABLE books(
+	bcode CHAR(4) PRIMARY KEY,
+	title VARCHAR(20) NOT NULL,
+	price NUMBER(7,2) NOT NULL,
+	vol	  NUMBER(2) NOT NULL,
+	pdate date NOT NULL,
+	zonar VARCHAR(50) NOT NULL
+);

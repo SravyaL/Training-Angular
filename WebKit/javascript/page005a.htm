@@ -1,0 +1,48 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function compute(optIndex){
+      t1 = document.getElementById("t1");
+      t2 = document.getElementById("t2");
+      res =  document.getElementById("res");
+
+      op1 = parseFloat(t1.value);
+      op2 = parseFloat(t2.value);
+	  
+	  ans =0;
+	  result="";
+	  
+	  switch(optIndex){
+		case 0: ans = op1+op2; result="Sum"; break;
+		case 1: ans = op1-op2; result="Dif"; break;
+		case 2: ans = op1*op2; result="Prd"; break;
+		case 3: ans = op1/op2; result="Qut"; break;
+		case 4: ans = op1%op2; result="Rem"; break;
+	  }
+	
+      res.innerHTML = "<b>"+result+": " + ans + "</b>"
+     }
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> Arithmetic Operations </h3>
+      Operand1: <input type="number" id="t1" />  <br />
+      Operand2: <input type="number" id="t2" />  <br />
+      <button type="button" onClick="compute(0)" >Add</button>
+      <button type="button" onClick="compute(1)" >Substract</button>
+      <button type="button" onClick="compute(2)" >Multiply</button>
+      <button type="button" onClick="compute(3)" >Dvivide</button>
+      <button type="button" onClick="compute(4)" >Modulo</button>
+    </form>                  
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

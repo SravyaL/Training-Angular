@@ -1,0 +1,14 @@
+25-Sep-2017 12:28:52 DEBUG [com.cg.ca.dao.ContactDaoImpl] - Contact Id is:	0
+First Name :	Vamsy
+Middle Name :	Kiran
+Last Name :	A
+Gender :	MALE
+Mobile No. 1 :	9052224753
+Mobile No. 2 :	9550204753
+Office Email :	ceo@techpinnacle.in
+Home Email :	a.vamc.it@gmail.com
+Category :	FRIENDS
+Organization :	Techpinnacle
+Designation:	CEO
+being added!
+25-Sep-2017 12:28:52 DEBUG [com.cg.ca.dao.ContactDaoImpl] - 11 values are added to pst insert

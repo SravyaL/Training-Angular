@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>Embeded Style Sheet Demo</title>
+		<style>
+		  body { 
+			background-color:#ff00ff;
+		  }	
+		</style>
+	</head>
+	<body>
+
+	</body>
+</html>

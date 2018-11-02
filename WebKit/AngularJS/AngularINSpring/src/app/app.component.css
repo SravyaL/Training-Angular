@@ -1,0 +1,20 @@
+*{
+    margin:5px;
+    padding:5px;
+}
+ nav{
+     background-color: #aaaaaa;
+     padding:10px;
+ }
+ nav a {
+     width:10%;
+     text-decoration: none;
+     display:inline-block;
+     margin:5px;
+     border-radius:3px;
+     text-align: center;
+     color:greenyellow;
+ }
+ a:hover{
+     background-color: red;
+ }

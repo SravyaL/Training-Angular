@@ -1,0 +1,60 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>Reservation Page</title>            
+   <link rel="stylesheet" href="styles/style1.css" />
+   <script src="scripts/script1.js"></script>
+  </head>
+  <body>    
+	<div class="formHolder">
+		<h2>ShowTime Reservation Form</h2>
+		<form onSubmit="return validate()">
+			<table>
+				<tr><td><label>Title</label></td>
+					<td><label><input type="radio" id="rbMr" name="title" />Mr. </label>
+						<label><input type="radio" id="rbMrs" name="title" />Mrs. </label>
+						<label><input type="radio" id="rbMis" name="title" />Miss. </label>
+					</td>
+				</tr>
+				<tr><td><label for="txtName">Name</label></td>
+					<td><input type="text" id="txtName" name="name" 
+						pattern="[A-Z]{1}[A-Za-z\s]{3,19}" required/>
+					</td>
+				</tr>
+				<tr><td><label for"txtMail">E.Mail Id</label></td>
+					<td><input type="email" id="txtMail" name="mailId" required /></td>
+				</tr>
+				<tr><td><label for="txtAdults">Adults Count</td>
+					<td><input type="number" id="txtAdults" name="adultCount" 
+						required min="1" max="10"/>
+					</td>
+				</tr>
+				<tr><td><label for="txtChild">Child Count</td>
+					<td><input type="number" id="txtChild" name="childCount" 
+						required min="0" max="10"/>
+					</td>
+				</tr>
+				<tr><td><label for="selClass">Class</label></td>
+					<td><select id="selClass" name="class" required>
+							<option value="">----SELECT----</option>
+							<option value="DC">Daimond Class</option>
+							<option value="GC">Gold Class</option>
+							<option value="SC">Silver Class</option>
+						</select>
+					</td>
+				</tr>
+				<tr><td><label for"txtSD">Show Date</label></td>
+					<td><input type="date" id="txtSD" name="showDate" required />
+				</tr>
+				<tr><td colspan="2">
+						<button type="reset">Cancel</button>
+						<button type="submit">Confirm</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+  </body>
+ </html>
+

@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title>Page 04</title>
+		<link rel="stylesheet" href="mystyle.css"/>
+		<script language="javascript">
+			function addEle(x){
+				cb = document.getElementById("selElement");
+				tb = document.getElementById("txtText");
+				var newElement;
+				
+				switch(cb.value){
+					case "p": 
+						newElement = document.createElement("p");
+						newElement.innerHTML = tb.value;
+						break;
+					case "b":
+						newElement = document.createElement("button");
+						newElement.innerHTML = tb.value;
+						break;
+					case "t":
+						newElement = document.createElement("input");
+						newElement.type="text";
+						newElement.value=tb.value;
+						break;
+					case "d":
+						newElement = document.createElement("input");
+						newElement.type="date";
+						newElement.value=tb.value;
+						break;
+				}
+				container = document.getElementById("container");
+				if(x==1)
+					container.append(newElement);
+				else
+					container.prepend(newElement);
+				
+				spc = document.getElementById("spCount");
+				spc.innerHTML = container.childNodes.length;
+			}
+			function removeEle(){
+				cb = document.getElementById("selElement");
+				container = document.getElementById("container");
+				tb = document.getElementById("txtText");
+				var eleToDelete;
+				
+				switch(cb.value){
+					case "p": 
+						var paras = container.getElementsByTagName("p");
+						for(i=0;i<paras.length;i++){
+							if(paras[i].innerHTML==tb.value){
+								eleToDelete = paras[i];
+								break;
+							}
+						}
+						break;
+					case "b":
+						var buttons = container.getElementsByTagName("button");
+						for(i=0;i<buttons.length;i++){
+							if(buttons[i].innerHTML==tb.value){
+								eleToDelete = buttons[i];
+								break;
+							}
+						}
+						break;
+					case "t":
+						var inputs = container.getElementsByTagName("input");
+						for(i=0;i<inputs.length;i++){
+							if(inputs[i].type=="text" && inputs[i].value==tb.value){
+								eleToDelete = inputs[i];
+								break;
+							}
+						}
+						break;
+					case "d":
+						var inputs = container.getElementsByTagName("input");
+						for(i=0;i<inputs.length;i++){
+							if(inputs[i].type=="date" && inputs[i].value==tb.value){
+								eleToDelete = inputs[i];
+								break;
+							}
+						}
+						break;
+				}
+				
+				eleToDelete.remove();
+				spc = document.getElementById("spCount");
+				spc.innerHTML = container.childNodes.length;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="container" style="border:1px solid black;min-height:200px">
+		</div>
+		<p>
+			Number of child elements: <span id="spCount">0</span>
+		</p>
+		<form>
+			Select Element: 
+				<select id="selElement">
+					<option value="p">Para</option>
+					<option value="t">TextBox</option>
+					<option value="d">DateInput</option>
+					<option value="b">Button</option>
+				</select>
+			Enter some text:<input type="text" id="txtText" style="width:375px"/>
+			<button type="button" onclick="addEle(1)">Append </button>
+			<button type="button" onclick="addEle(2)">Prepand </button>
+			<button type="button" onclick="removeEle()">Remove</button>
+		</form>
+	</body>
+</html>

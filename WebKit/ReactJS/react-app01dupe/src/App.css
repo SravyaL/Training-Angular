@@ -1,0 +1,13 @@
+.badge, .badgeBtn{
+  background-color: crimson;
+  color: #ffffff;
+  font-weight: 400;
+  border-radius: 70px;
+  display: inline-block;
+  margin: 3px;
+  padding: 4px;
+}
+
+.badgeBtn{
+  cursor: pointer;
+}

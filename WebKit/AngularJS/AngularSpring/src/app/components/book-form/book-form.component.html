@@ -1,0 +1,63 @@
+<h3>
+  {{isEdit?Edit:New}} Book
+</h3>
+<form name="form" #f=ngForm novalidate (ngSubmit)="f.form.valid && saveBook()"> 
+
+  <table>
+    <tr>
+      <th>Eid</th>
+      <td>
+        <input type="number" name="eid" [(ngModel)]="book.eid" *ngIf="!isEdit" />
+        <span *ngIf="isEdit">{{book.eid}}</span>
+      </td>
+
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td>
+        <input type="text" [(ngModel)]="book.name" name="name" #name=ngModel required minlength="5" maxlength="40"  />
+        <ul [hidden]=name.valid>
+          <li  [hidden]=name.required>cannot be empty</li>
+          <li  [hidden]=name.minlength>cannot be less than 5</li>
+          <li  [hidden]=name.maxlength>cannot be greater than 40</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>Basic</th>
+      <td>
+        <input type="number" name="basic" [(ngModel)]="book.basic" />
+      </td>
+    </tr>
+    <tr>
+      <th>Hra</th>
+      <td>
+        <input type="number" name="hra" [(ngModel)]="book.hra" />
+      </td>
+    </tr>
+    <tr>
+      <th>Dept</th>
+      <td>
+        <select [(ngModel)]="book.dept" name="dept" #dept=ngModel required > 
+          <option value="">--Select--</option>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="IT">IT</option>
+          <option value="MECHANICAL">MECHANICAL</option>
+        </select>
+        <ol [hidden]=dept.valid>
+          <li>Please select from list</li>
+        </ol>
+      </td>
+
+    </tr>
+
+    <tr>
+      <td colspan="2" style="text-align: right">
+        <button>Save</button>
+        <br>
+      </td>
+    </tr>
+
+  </table>
+</form>

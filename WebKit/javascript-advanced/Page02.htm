@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Page 02</title>
+		<link rel="stylesheet" href="mystyle.css"/>
+		<script language="javascript">
+			function changeBG(){
+				tb1 = document.getElementById("txtBGColor");
+				c = tb1.value;
+				bd = document.getElementById("bd");
+				bd.style.backgroundColor=c;
+			}
+			function changeFG(){
+				tb1 = document.getElementById("txtFGColor");
+				c = tb1.value;
+				bd = document.getElementById("bd");
+				bd.style.color=c;
+			}
+		</script>
+	</head>
+	<body id="bd">
+	 <p id="p1">This is a normal para</p>
+	 <form>
+		<p><label>Enter a BG color:</label>
+		<input type="text" id="txtBGColor" />
+		<button type="button" onclick="changeBG()">Change Background</button></p>
+		
+		<p><label>Enter a FG color:</label>
+		<input type="text" id="txtFGColor" />
+		<button type="button" onclick="changeFG()">Change Foreground</button></p>
+	 </form>
+	 
+	</body>
+</html>

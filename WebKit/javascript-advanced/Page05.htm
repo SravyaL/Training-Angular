@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Page 05</title>
+		<link rel="stylesheet" href="mystyle.css"/>
+		<script language="javascript" src="flowerInventoryCode.js"></script>
+	</head>
+	<body onload="init()">
+		<form>
+			<table>
+			<tr><td>Select Flower: </td>
+				<td><select id="selItemName" onchange="getItemDetails()">
+								<option>----Select-----</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td>Item Code</td><td><span id="spICode"></span></td></tr>
+			<tr><td>Item Cost</td><td><span id="spRate"></span></td></tr>
+		</form>
+	</body>
+</html>

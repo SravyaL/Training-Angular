@@ -1,0 +1,32 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+   	class Student{
+		constructor(name,roll,fee){
+			this.name=name;
+			this.roll=roll;
+			this.fee=fee;
+		}
+
+		toString(){
+			return 	"Name: " +this.name +"<br />" +
+				"Roll: " +this.roll +"<br />" +
+				"Fee: " + this.fee+"<br />";
+		}
+	}
+
+	var s = new Student("Komal Kumar",12,2500);
+	s.age =12;
+	document.writeln(s.toString());	
+	document.writeln(s.age);
+   </script>                          
+  </head>
+  <body>    
+
+  </body>
+ </html>
+

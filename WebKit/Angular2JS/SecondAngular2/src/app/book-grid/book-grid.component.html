@@ -1,0 +1,28 @@
+
+<h3>Books Grid</h3>
+
+<p *ngIf="bookStoreService.bookStore.length==0">
+  No Books As If Now To Display
+</p>
+
+<div *ngIf="bookStoreService.bookStore.length>0">
+  <table>
+    <tr>
+      <th>Bcode</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Publish Date</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let book of bookStoreService.bookStore">
+        <td>{{book.bcode}}</td>
+        <td>{{book.title | uppercase}}</td>
+        <td>{{book.price | currency : 'INR' : true}}</td>
+        <td>{{book.pubDate | date : 'dd-MMM-yyyy'}}</td>
+        <td>
+          <button>Delete</button>
+          <button>Edit</button>
+        </td>
+    </tr>
+  </table>
+</div>

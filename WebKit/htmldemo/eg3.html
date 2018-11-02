@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+<body>
+<form action="Page1.htm">
+<div>
+<label>Enter your name:</label>
+<input type="text" id="t1" name="t1" required/>
+</div>
+<div>
+<label>Enter your age:</label>
+<input type="number" id="t2" name="t2" min ='18' max='60' required/>
+</div>
+<div>
+<label>Date of registration</label>
+<input type="date" id="t3" name="t3" min='1996-09-19' max='2096-09-19'required/>
+</div>
+<div>
+<label>Enter Employee ID:</label>
+<input type="text" id="t4" name="t4" required pattern="[A-Za-z]{2}[0-9]{5}"/>
+</div>
+<div>
+<label>Enter department:</label>
+<input type="text" list="depts" id="t5" name="t5" required/>
+<datalist id="depts">
+	<option value="abc"/>
+	<option value="bgf"/>
+</datalist
+</div>
+<div>
+<button type="submit">Submit</button>
+</div>
+
+</form>
+</body>
+</html>

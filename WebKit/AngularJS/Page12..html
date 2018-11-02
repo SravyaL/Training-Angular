@@ -1,0 +1,19 @@
+<html ng-app="cgDemoApp">
+	<head>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/myscript.js"></script>
+	</head>
+	<body>
+		<div style="border-bottom:1px solid black" ng-controller="ctrl1">
+			<h2>{{appTitle}}</h2>
+			<h3>Call Me On {{contacts[0]}} |
+				WhatsApp Me On {{contacts[1]}}</h3>
+		</div>
+						
+		<h3>
+		 Vamsy Kiran -- {{'Vamsy Kiran'|reverseText}}
+		</h3>
+		<p greeting />
+		<p today >this is para</p>
+	</body>
+</html>

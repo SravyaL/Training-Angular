@@ -1,0 +1,28 @@
+<html ng-app="cgDemoApp">
+	<head>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/myscript.js"></script>
+	</head>
+	<body ng-controller="ctrl1">
+		<div style="border-bottom:1px solid black">
+			<h2>{{appTitle}}</h2>
+			<h3>Call Me On {{contacts[0]}} |
+				WhatsApp Me On {{contacts[1]}}</h3>
+		</div>
+		<div ng-init="a=8">
+			Enter a number: <input type="number" ng-model="a" /> <br />
+			<p ng-if="a >= 0">
+				{{a}} <strong> is Positive</strong>
+			</p>
+			<p ng-if="a < 0">
+				{{a}} <strong> is negative</strong>
+			</p>
+			<p ng-if="a%2 == 0">
+				{{a}} <strong> is Even</strong>
+			</p>
+			<p ng-if="a%2 != 0">
+				{{a}} <strong> is Odd</strong>
+			</p>
+		</div>
+	</body>
+</html>

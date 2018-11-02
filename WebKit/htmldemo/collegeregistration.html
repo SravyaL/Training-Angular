@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Registration! </title>
+	</head>
+	<body>
+		<h3>College Registration Form</h3>
+		<form autocomplete="off">
+		<div>
+		<label width='1000px'>Name:</label>
+		<input type="text" id ='t1' maxlength="15" required/>
+		</div>
+		<div>
+		<label width='100px'>Date of Birth:</label>
+		<input type="date" id ='t2' min='1990-06-01' max='2000-06-01'required/>
+		</div>
+		<div>
+		<label>Father's Name:</label>
+		<input type="text" id ='t3' required/>
+		</div>
+		<div>
+		<label>Mother's Name:</label>
+		<input type="text" id ='t4' required/>
+		</div>
+		<div>
+		<label>Gender:</label>
+		<select id ='gender' required/>
+		
+			<option value="">Select</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select>
+		</div>
+		<div>
+		<label>Number</label>
+		<input type="text" id='t7' required pattern="[0-9]{10}">
+		</div>
+		<div>
+		<label>Department</label>
+		<input type="text" list="depts"id ='t5' required/>
+		<datalist id="depts">
+			<option value="CSE"/>
+			<option value="Mech"/>
+			<option value="EEE"/>
+			<option value="ECE"/>
+			<option value="Civil"/>
+		</datalist>
+		</div>
+		<div>
+		<label>Upload file:</label>
+		<input type="file" id='t8' name="t8" required >
+		</div>
+		<div>
+		<button type="submit" formaction="Page1.htm">Submit1</button>
+		<button type="submit" formaction="Page2.htm" formnovalidate>Cancel</button>
+		</div>
+		</form>
+	</body>
+</html>

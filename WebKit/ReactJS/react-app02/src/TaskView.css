@@ -1,0 +1,38 @@
+table{
+    border: 1px;
+    padding: 25px;
+    margin: 5px;
+}
+
+tr,td{
+    padding: 15px;
+    width: 40%;
+    align-content: center;
+    background-color: blue;
+}
+
+tr:hover{
+    background-color: lightgrey;
+}
+askView{    
+    margin-bottom:8px;    
+    margin-top:10px;}
+    span{    
+        padding:8px;    
+        display: inline-block;
+    }
+    .col1{    
+        background-color: blue;    
+        color: #ffffff;    
+        width:50px;}
+        .col2{    
+            background-color: pink;    
+            width:1000px;    
+            font-weight: 100px;}
+            .col2a{    
+                background-color:pink;    
+                width:20px;    
+                font-weight: 20px;    
+                text-align:center;   
+            }
+            .col3{    background-color: yellow;    width:50px;}button{    padding:8px;    background-color:beige;}

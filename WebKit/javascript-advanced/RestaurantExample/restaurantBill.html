@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>A hotel Bill</title>
+  <link rel="stylesheet" href="restStyle.css" />
+  <script src="restBillScript.js"></script>
+ </head>
+ <body>
+  <form onsubmit="return submitForm()">
+	<table>
+	 <tr><td><label for="txtgnm">Guest Name</label></td>
+	 	 <td><input type="text" id="txtgnm" required pattern="[A-Z][A-Za-z\s]{1,24}" /> </td>
+	 </tr>
+	 <tr><td><label for="txtchin">Check In</label></td>
+	 	 <td><input type="date" id="txtchin" required /> </td>
+	 </tr>
+	 <tr><td><label for="txtchout">Check Out</label></td>
+	 	 <td><input type="date" id="txtchout" required /> </td>
+	 </tr>
+	 <tr><td><label for="txtfb">Food Bill</label></td>
+	 	 <td><input type="number" id="txtfb" min="0" required /> </td>
+	 </tr>
+	 <tr><td><label for="txtnet">Wifi Bill</label></td>
+	 	 <td><input type="number" id="txtnet" min="0" required/> </td>
+	 </tr>
+	 <tr><td><label for="txtadv">Advance</label></td>
+	 	 <td><input type="number" id="txtadv" min="0" max="5000" required/> </td>
+	 </tr>
+	 <tr><td><label for="txtgst">GST%</label></td>
+	 	 <td><input type="number" id="txtgst" min="0" max="25" required /> </td>
+	 </tr>
+	 <tr><td><label for="selmode">Paymode</label></td>
+	 	 <td><select id="selmode" required>
+				<option value="">---SELECT---</option>
+				<option value="cs">Cash</option>
+				<option value="cd">Card</option>
+				<option value="ol">Online</option>
+				<option value="ch">Check</option>
+				<option value="off">Office</option>
+			 </select>
+		 </td>
+	 </tr>
+	 <tr><td><label>Overall Rating </label></td>
+		 <td>
+			<label><input type="radio" id="rb1" value="0" name="rating"/>
+					Not Satisfied
+			</label>
+			<label><input type="radio" id="rb2" value="1" name="rating"/>
+					Satisfied
+			</label>
+			<label><input type="radio" id="rb3" value="2" name="rating"/>
+					Very Much Satisfied
+			</label>
+		 </td>
+	 </tr>
+	 <tr>
+		<td colspan="2">
+		 <label><input type="checkbox" id="chk1" required />
+		 I accept all terms and conditions
+		 </label>
+		</td>
+	 </tr>
+	 <tr><td colspan="2">
+			<button type="submit">
+				Geenrate Bill
+			</button>
+		 </td>
+	 </tr>
+	</table>
+  </form>
+ </body>
+</html>

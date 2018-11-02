@@ -1,0 +1,16 @@
+2018-01-04 11:10:41,082 INFO [dao] - books successfully loaded
+2018-01-04 11:12:08,053 INFO [dao] - Added Book: Book [bcode=B104, title=ParrotsPop, volume=1, publishDate=2002-02-02, zonar=FICTION, price=12.0]
+2018-01-04 11:12:17,310 INFO [dao] - books successfully saved
+2018-01-04 11:13:07,990 INFO [dao] - books map is newly instantiated
+2018-01-04 11:13:19,627 ERROR [dao] - java.io.FileNotFoundException: a:\bookstore.dat (The system cannot find the path specified)
+2018-01-10 10:02:59,356 INFO [dao] - books successfully loaded
+2018-02-10 09:38:08,283 INFO [dao] - books map is newly instantiated
+2018-02-10 09:39:13,999 INFO [dao] - Added Book: Book [bcode=B101, title=LetUsPlay, volume=1, publishDate=2011-11-11, zonar=FICTION, price=1111.0]
+2018-02-10 09:40:48,261 INFO [dao] - books map is newly instantiated
+2018-02-10 09:41:36,425 INFO [dao] - books map is newly instantiated
+2018-02-10 09:41:55,433 INFO [dao] - Added Book: Book [bcode=B101, title=Players, volume=1, publishDate=2011-11-11, zonar=FICTION, price=1111.0]
+2018-02-10 09:43:21,770 INFO [dao] - books map is newly instantiated
+2018-02-10 09:43:50,231 INFO [dao] - Added Book: Book [bcode=B101, title=LetMeSee, volume=1, publishDate=2011-11-11, zonar=FICTION, price=1111.0]
+2018-02-10 09:48:35,610 INFO [dao] - books map is newly instantiated
+2018-02-10 09:49:00,163 INFO [dao] - Added Book: Book [bcode=B101, title=LetUsStay, volume=1, publishDate=2011-11-11, zonar=FICTION, price=1111.0]
+2018-02-10 09:49:03,748 INFO [dao] - Books written to xml file

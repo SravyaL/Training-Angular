@@ -1,0 +1,10 @@
+<h3>
+  Task Manager
+</h3>
+<p>We have completed <strong>{{completedCount}}</strong>tasks out of <strong>{{tasks.length}}</strong></p>
+<div>
+  <app-new-task (add)="handleAdd($event)"></app-new-task>
+  </div>
+  <div>
+  <app-task-view *ngFor="let task of tasks" [task]="task"(completed)="handleCompleted($event)"></app-task-view>
+</div>

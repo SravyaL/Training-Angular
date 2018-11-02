@@ -1,0 +1,35 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     function analyze(){
+        t1 = document.getElementById("t1");
+        res = document.getElementById("res");
+
+        res.innerHTML =
+        "<b> Char Count: "  + t1.value.length +
+        "<br />  Upper Case: "  + t1.value.toUpperCase() +
+        "<br />  Lower Case: "  + t1.value.toLowerCase() +
+        "<br />  substring(3,8): "  + t1.value.substring(3,8) +
+        "<br />  charAt(2): "  + t1.value.charAt(2) + "</b>" ;        
+     }
+   </script>
+  </head>
+  <body>    
+    <form>
+      <h3> String Functions Demo </h3>
+      Enter any string:
+      <input type="text" id="t1" size="80" />
+      <button type="button" onClick="analyze()" >Analyze</button>
+    </form>
+
+    <div class="result">
+      <h3> Result appears here </h3>
+      <span id="res"></span>
+    </div>
+  </body>
+ </html>
+

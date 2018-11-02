@@ -1,0 +1,23 @@
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+   
+	d = new Date();
+	document.writeln("<h2>"+d.getDay()+"-"+(d.getMonth()+1)+"-"+(d.getYear()+1900));
+	document.writeln("<h2>"+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
+
+	dobString = prompt("Enter dob (yyyy-mm-dd)","yyyy-mm-dd");
+	dob = new Date(dobString);
+	document.writeln("<h2>Today: "+d+"</h2>");
+	document.writeln("<h2>DOB: "+dob+"</h2>");
+	document.writeln("<h2>Age: "+(d.getYear()-dob.getYear())+" yrs approx</h2>");
+   </script>                          
+  </head>
+  <body>    
+  </body>
+ </html>
+

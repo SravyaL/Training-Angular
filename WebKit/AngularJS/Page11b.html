@@ -1,0 +1,78 @@
+<html ng-app="cgDemoApp">
+	<head>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/myscript.js"></script>
+		<style>
+			*{
+				margin:auto;
+				padding:10px;
+			}
+			a{
+				text-decoration:none;
+			}
+			a:visited,a:hover,a,.headerRow{
+				background-color:#000000;
+				color:#ffffff;
+			}
+			.evenRow{
+				background-color:blue;
+				color:black;
+			}
+			.oddRow{
+				background-color:cyan;
+				color:black;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="border-bottom:1px solid black" ng-controller="ctrl1">
+			<h2>{{appTitle}}</h2>
+			<h3>Call Me On {{contacts[0]}} |
+				WhatsApp Me On {{contacts[1]}}</h3>
+		</div>
+		<div ng-controller="shopping">
+			<table ng-init="sortCol='id';revFlag=false;">
+				<tr class="headerRow">
+					<th><a href="#" ng-click="sortCol='id';revFlag=!revFlag;">Item#</a></th>
+					<th><a href="#" ng-click="sortCol='name';revFlag=!revFlag;">Name</a></th>
+					<th><a href="#" ng-click="sortCol='rate';revFlag=!revFlag;">Rate</a></th>
+					<th><a href="#" ng-click="sortCol='qty';revFlag=!revFlag;">Qty</a></th>
+					<th><a href="#" ng-click="sortCol='amt';revFlag=!revFlag;">Amount</a></th>
+					<th>Action</th>
+				</tr>
+				<tr class="evenRow">
+					<td><input type="number" ng-model="newItem.id"/></td>
+					<td><input type="text" ng-model="newItem.name"/></td>
+					<td><input type="number" ng-model="newItem.rate"/></td>
+					<td />
+					<td />
+					<td><Button ng-click="addItem()">ADD</Button></td>
+				</tr>
+				<tr ng-repeat="item in items|orderBy:sortCol:revFlag" 
+				    ng-class-even="'evenRow'"
+					ng-class-odd="'oddRow'">
+					<td ng-bind="item.id" />
+					<td ng-bind="item.name|uppercase" />
+					<td ng-bind="item.rate|currency:'&#8377;&nbsp;'" />
+					<td><input type="number" ng-model="item.qty"  ng-change="computeAmount(item)"/></td>
+					<td ng-bind="item.amt|currency:'&#8377;&nbsp;'" />
+					<td><Button ng-click="removeItem($index)">Remove</Button></td>
+				</tr>
+				<tr>
+					<td colspan="4" style="text-align:right">Total </td>
+					<td ng-bind="totalCost|currency:'&#8377;&nbsp;'"/>
+				</tr>
+			</table>
+			
+			<hr />
+			<p ng-repeat="item in items">
+			  {{item|json}}
+			</p>
+			
+			<hr />
+			<p ng-repeat="item in items" ng-bind="item|json" />
+		
+		</div>
+		
+	</body>
+</html>

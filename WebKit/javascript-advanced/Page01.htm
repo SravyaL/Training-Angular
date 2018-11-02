@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Page 01</title>
+		<link rel="stylesheet" href="mystyle.css"/>
+		<script language="javascript">
+			function changeFontSize(){
+				tb1 = document.getElementById("txtFontSize");
+				fs = parseInt(tb1.value);
+				para1 = document.getElementById("p1");
+				para1.style.fontSize=fs;
+			}
+			function hover(){
+				para1 = document.getElementById("p1");
+				para1.style.backgroundColor="white";
+			}
+			function mouseLeft(){
+				para1 = document.getElementById("p1");
+				para1.style.backgroundColor="green";
+			}
+		</script>
+	</head>
+	<body>
+	 <p id="p1" onMouseOver="hover()" onMouseLeave="mouseLeft()">This is a normal para</p>
+	 <form>
+		<label>Enter Font Size:</label>
+		<input type="range" min="5" max="150" id="txtFontSize"
+		onChange="changeFontSize()" />
+	 </form>
+	 
+	</body>
+</html>

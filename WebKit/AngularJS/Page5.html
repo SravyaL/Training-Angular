@@ -1,0 +1,27 @@
+<html ng-app="cgDemoApp">
+	<head>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/myscript.js"></script>
+	</head>
+	<body ng-controller="ctrl1">
+		<div style="border-bottom:1px solid black">
+			<h2>{{appTitle}}</h2>
+			<h3>Call Me On {{contacts[0]}} |
+				WhatsApp Me On {{contacts[1]}}</h3>
+		</div>
+		<div ng-init="day=0">
+			Enter a digit (0 to 6): 
+			<input type="number" ng-model="day" />
+			<div ng-switch on="day">
+				<p ng-switch-when="0"><strong>Sunday</strong></p>
+				<p ng-switch-when="1"><strong>Monday</strong></p>
+				<p ng-switch-when="2"><strong>Tuesday</strong></p>
+				<p ng-switch-when="3"><strong>Wednesday</strong></p>
+				<p ng-switch-when="4"><strong>Thursday</strong></p>
+				<p ng-switch-when="5"><strong>Friday</strong></p>
+				<p ng-switch-when="6"><strong>Saturday</strong></p>
+				<p ng-switch-default><strong>Not a WEEK</strong></p>
+			</div>
+		</div>
+	</body>
+</html>

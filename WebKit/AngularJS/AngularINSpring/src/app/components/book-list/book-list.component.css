@@ -1,0 +1,16 @@
+table{
+    width:95%;
+    margin:auto;
+    border:2px solid black;
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+th,td{
+    padding:5px;
+    border-bottom:1px solid black;
+}
+tbody tr:last-child td{
+    border-bottom: 0px;
+}

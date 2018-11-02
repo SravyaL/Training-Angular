@@ -1,0 +1,30 @@
+
+ <!DOCTYPE HTML>
+
+ <html>
+  <head>
+   <title>JavaScript Page1</title>
+   <link rel="stylesheet" href="style1.css"  />                  
+   <script language="javascript">
+     document.writeln("<table border='3' style='width:250px;margin:auto'>");
+	 document.writeln("<tr><th>Code</th><th>Color</th></tr>");
+	 for(i=0;i<=29;i++){
+		for(j=0;j<=29;j++){
+			for(k=0;k<=29;k++){
+				var color="#";
+				color = i<=9? color + "0" + i : color + i;
+				color = j<=9? color + "0" + j : color + j;
+				color = k<=9? color + "0" + k : color + k;
+				document.writeln("<tr><td>"+color+"</td>");
+				document.writeln("<td style='background-color:"+color+";width:100px' /></tr>");			
+			}
+		}
+	 }
+	 
+	 document.writeln("</table>");
+   </script>
+  </head>
+  <body>    
+  </body>
+ </html>
+
